@@ -2,8 +2,10 @@
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 const fileName = require("./README.md");
+const writeFile = require('fs');
+const 
 // TODO: Create an array of questions for user input
-// questions: Project Title, description, installation instructions, usage information, contribution guildelines, test instructions, liscense (label and shield at top),  github username, email address
+    // questions: Project Title, description, installation instructions, usage information, contribution guildelines, test instructions, liscense (label and shield at top),  github username, email address
 
 const questions = [
   {
@@ -61,7 +63,7 @@ inquirer.prompt(questions).then(generateMarkdown);
 
 // TODO: Create a function to write README file
 
-writeToFile(fileName, data, (err) => {
+writeFile(fileName, data, (err) => {
   if (err) {
     console.log(err);
   } else {

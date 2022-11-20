@@ -17,24 +17,34 @@ function generateMarkdown(data) {
     ${renderLicenseBadge(license)}
 
     ## Description
+    ${data.description}
     
     ## Table of Contents
       - [Installation](#installation)
       - [Usage](#usage)
-      - 
+      - [Test(s)](#tests)
       - [Credits](#credits)
       - [License](#license)
-    
+      - [Contact](#contact)
+
     ## Installation
     ${data.installation}
 
     ## Usage
     ${data.usage}
 
+    ##Test(s)
+    ${data.tests}
+
     ## Credits
     ${data.credits}
 
+    ## License
+    ${data.license}
 
+    ## Contact
+    For any questions contacts, you can reach me at: ${data.email}
+    To view my github profile, and other projects, please visit; ${data.github}
 
 `;
 }

@@ -3,6 +3,7 @@
 // TODO: Create an array of questions for user input
     // questions: Project Title, description, installation instructions, usage information, contribution guildelines, test instructions, liscense (label and shield at top),  github username, email address
 const inquirer = require('inquirer'); 
+const generateMarkdown = require('./utils')
 const questions = [{
     type: "input",
     message: "What is the title of your Project?",

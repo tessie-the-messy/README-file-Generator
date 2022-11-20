@@ -26,7 +26,7 @@ const questions = [{
 {
     type: "input",
     message: "Please list the names and websites/git hub profiles of any contributors.",
-    name: "contributing",
+    name: "credits",
 
 },
 {

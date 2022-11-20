@@ -1,18 +1,30 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (questions[6]) {
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+} else if {
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+} else if {
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+} else if {
+
+} else {
+
+}}
+
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {}
+
+// // TODO: Create a function that returns the license section of README
+// // If there is no license, return an empty string
+// function renderLicenseSection(license) {}
+
+// // TODO: Create a function to generate markdown for README
+// function generateMarkdown(data) {
   // labels: 'empty h1 for project title', Description, Installation, Usage, Tests, Licesnse, Questions
+  // links in Table of Contents to take to corresponding sections
   return `# ${data.title}
     ${renderLicenseBadge(license)}
 
@@ -47,6 +59,6 @@ function generateMarkdown(data) {
     To view my github profile, and other projects, please visit; ${data.github}
 
 `;
-}
+// }
 
 module.exports = generateMarkdown;

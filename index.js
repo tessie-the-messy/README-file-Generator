@@ -2,8 +2,7 @@
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 const fileName = require("./README.md");
-const writeFile = require('fs');
-const 
+const fs = require('fs');
 // TODO: Create an array of questions for user input
     // questions: Project Title, description, installation instructions, usage information, contribution guildelines, test instructions, liscense (label and shield at top),  github username, email address
 
@@ -44,35 +43,44 @@ const questions = [
   {
     type: "list",
     message: "Choose which license",
-    choices: ["MIT", "GPLv2", "GPLv3", "Apache", "Other/None"],
     name: "license",
+    choices: ["MIT", "GPLv2", "GPLv3", "Apache", "Other/None"],
   },
   {
-    type: "list",
+    type: "input",
     message: "What is your github username?",
     name: "github",
   },
   {
-    type: "list",
+    type: "input",
     message: "What is your email address?",
     name: "email",
   },
 ];
 
-inquirer.prompt(questions).then(generateMarkdown);
+function init() {
+inquirer.prompt(questions)
+.then((response) => {
+    const data =  generateMarkdown(response);
+    writeFile('README.md', data)
+})
+
+
+}
 
 // TODO: Create a function to write README file
 
-writeFile(fileName, data, (err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log("README successfully created!");
-  }
-});
+function writeFile (fileName, data){
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("README successfully created!");
+        }
+    
+      });
+}
+// // TODO: Create a function to initialize app
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
+// // Function call to initialize app
 init();

@@ -1,56 +1,59 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if () {
+  console.log(license)
+//   if (questions[6].choices = "MIT") { 
+   
+// } else if(questions[6].choices = "GPLv2") {
+ 
+// } else if (questions[6].choices = "GPLv3") {
+
+// } else if (question) {
+
+// } else { 
+  
+// }
+};
+
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+// function renderLicenseLink(license) {
+//   // if () {
     
-} else if() {
+//   // } else if() {
+  
+//   // } else if {
+  
+//   // } else if {
+  
+//   // } else {
+  
+//   // }
+// }
 
-} else if {
-
-} else if {
-
-} else {
-
-}}
-
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if () {
+ // TODO: Create a function that returns the license section of README
+ // If there is no license, return an empty string
+// function renderLicenseSection(license) {
+//   // if () {
     
-  } else if() {
+//   // } else if() {
   
-  } else if {
+//   // } else if {
   
-  } else if {
+//   // } else if {
   
-  } else {
+//   // } else {
   
-  }
-}
-
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if () {
-    
-  } else if() {
-  
-  } else if {
-  
-  } else if {
-  
-  } else {
-  
-  }
-}
+//   // }
+// }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   // labels: 'empty h1 for project title', Description, Installation, Usage, Tests, Licesnse, Questions
   // links in Table of Contents to take to corresponding sections
-  ${renderLicenseBadge(license)}
   return `# ${data.title}
+  ${renderLicenseBadge(license)}
 
     ## Description
     ${data.description}
@@ -76,13 +79,14 @@ function generateMarkdown(data) {
     ${data.credits}
 
     ## License
-    ${data.license}
-
+    ${renderLicenseSection(license)}
+    For more information visit: ${renderLicenseLink(license)}
+    
     ## Contact
     For any questions contacts, you can reach me at: ${data.email}
     To view my github profile, and other projects, please visit; ${data.github}
-
-`;
-};
-
+    
+    `;
+  };
+  
 module.exports = generateMarkdown;

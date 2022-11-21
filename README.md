@@ -1,4 +1,4 @@
-# asdfas
+# asdf
 
     ## Description
     asdf
@@ -23,10 +23,9 @@
     ## Credits
     asdf
 
-    ## License
-    Other/None
-
+    
     ## Contact
     For any questions contacts, you can reach me at: asdf
     To view my github profile, and other projects, please visit; asdf
-
+    
+    

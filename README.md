@@ -30,5 +30,8 @@
   ## Contact
   #### For any questions contacts, you can reach me at: tessa.elise.robinson@gmail.com
   #### To view my github profile, and other projects, please visit; tessie_the_messy
+
+  ## Video Example
+  [Video](./assets/Untitled_%20Nov%2021%2C%202022%208_47%20PM.webm)
     
     

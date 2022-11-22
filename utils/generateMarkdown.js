@@ -1,20 +1,11 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  console.log(license)
-//   if (questions[6].choices = "MIT") { 
-   
-// } else if(questions[6].choices = "GPLv2") {
- 
-// } else if (questions[6].choices = "GPLv3") {
-
-// } else if (question) {
-
-// } else { 
-  
-// }
+  if (license !== "Other/None") {
+    return `![License](https://img.shields.io/badge/license-${license}-brightgreen)`;
+  }
+  return "";
 };
-
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -53,40 +44,38 @@ function generateMarkdown(data) {
   // labels: 'empty h1 for project title', Description, Installation, Usage, Tests, Licesnse, Questions
   // links in Table of Contents to take to corresponding sections
   return `# ${data.title}
-  ${renderLicenseBadge(license)}
+  ${renderLicenseBadge(data.license)}
 
-    ## Description
+  ## Description:
     ${data.description}
     
-    ## Table of Contents
-      - [Installation](#installation)
-      - [Usage](#usage)
-      - [Test(s)](#tests)
-      - [Credits](#credits)
-      - [License](#license)
-      - [Contact](#contact)
+  ## Table of Contents:
+  #### - [Installation](#installation)
+  #### - [Usage](#usage)
+  #### - [Tests](#tests)
+  #### - [Credits](#credits)
+  #### - [License](#license)
+  #### - [Contact](#contact)
 
-    ## Installation
-    ${data.installation}
+  ## Installation:
+  ###### ${data.installation}
 
-    ## Usage
-    ${data.usage}
+  ## Usage:
+  ###### ${data.usage}
 
-    ##Test(s)
-    ${data.tests}
+  ## Tests:
+  ###### ${data.tests}
 
-    ## Credits
-    ${data.credits}
-
-    ## License
-    ${renderLicenseSection(license)}
-    For more information visit: ${renderLicenseLink(license)}
+  ## Credits:
+  ###### ${data.credits}
     
-    ## Contact
+  ## Contact:
     For any questions contacts, you can reach me at: ${data.email}
     To view my github profile, and other projects, please visit; ${data.github}
     
     `;
   };
+  // ${renderLicenseSection(data.license)}
+  // For more information visit: ${renderLicenseLink(data.license)}
   
 module.exports = generateMarkdown;

@@ -9,35 +9,22 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-// function renderLicenseLink(license) {
-//   // if () {
-    
-//   // } else if() {
-  
-//   // } else if {
-  
-//   // } else if {
-  
-//   // } else {
-  
-//   // }
-// }
+function renderLicenseLink(license) {
+  if (license !== "Other/None") {
+    return `For more information visit https://opensource.org/licenses/${license}`
+  }
+  return "";
+};
+
 
  // TODO: Create a function that returns the license section of README
  // If there is no license, return an empty string
-// function renderLicenseSection(license) {
-//   // if () {
-    
-//   // } else if() {
-  
-//   // } else if {
-  
-//   // } else if {
-  
-//   // } else {
-  
-//   // }
-// }
+function renderLicenseSection(license) {
+  if (license !== "Other/None") {
+    return `License: ${license} license`
+  }; 
+  return "";
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -46,36 +33,37 @@ function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
 
-  ## Description:
-    ${data.description}
+  ## Description
+   ### ${data.description}
     
-  ## Table of Contents:
-  #### - [Installation](#installation)
-  #### - [Usage](#usage)
-  #### - [Tests](#tests)
-  #### - [Credits](#credits)
-  #### - [License](#license)
-  #### - [Contact](#contact)
+  ## Table of Contents
+  ### - [Installation](#installation)
+  ### - [Usage](#usage)
+  ### - [Tests](#tests)
+  ### - [Credits](#credits)
+  ### - [License](#license)
+  ### - [Contact](#contact)
 
-  ## Installation:
-  ###### ${data.installation}
+  ## Installation
+  #### ${data.installation}
 
-  ## Usage:
-  ###### ${data.usage}
+  ## Usage
+  #### ${data.usage}
 
-  ## Tests:
-  ###### ${data.tests}
+  ## Tests
+  #### ${data.tests}
 
-  ## Credits:
-  ###### ${data.credits}
+  ## Credits
+  #### ${data.credits}
+
+  ## ${renderLicenseSection(data.license)}
+  #### ${renderLicenseLink(data.license)}
     
-  ## Contact:
-    For any questions contacts, you can reach me at: ${data.email}
-    To view my github profile, and other projects, please visit; ${data.github}
+  ## Contact
+  #### For any questions contacts, you can reach me at: ${data.email}
+  #### To view my github profile, and other projects, please visit; ${data.github}
     
     `;
   };
-  // ${renderLicenseSection(data.license)}
-  // For more information visit: ${renderLicenseLink(data.license)}
   
 module.exports = generateMarkdown;

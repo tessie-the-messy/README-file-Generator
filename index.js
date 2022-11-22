@@ -60,7 +60,7 @@ const questions = [
 function init() {
   inquirer.prompt(questions).then((response) => {
     const data = generateMarkdown(response);
-    writeFile("README.md", data);
+    writeFile("./ReadMeFile/README.md", data);
   });
 }
 

@@ -1,8 +1,8 @@
-# ffffffff
-  ![License](https://img.shields.io/badge/license-Apache-brightgreen)
+# README File Generator
+  ![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
   ## Description
-   ### ffffffff
+   ### This application, made with node.js, is able to automatically create README files for your github projects and repos.
     
   ## Table of Contents
   ### - [Installation](#installation)
@@ -13,22 +13,22 @@
   ### - [Contact](#contact)
 
   ## Installation
-  #### ffffffffff
+  #### To install, simply download the files to whatever coding program you use (VS Code reccomended). Then open a terminal and use the "node index.js" command.
 
   ## Usage
-  #### fffffff
+  #### Can be used as needed for any README files needed!
 
   ## Tests
-  #### ffffff
+  #### N/A
 
   ## Credits
-  #### ffffffff
+  #### Starter code can be found at:https://github.com/coding-boot-camp/potential-enigma
 
-  ## License: Apache "license"
-  #### "For more information visit https://opensource.org/licenses/Apache
+  ## License: MIT license
+  #### For more information visit https://opensource.org/licenses/MIT
     
   ## Contact
-  #### For any questions contacts, you can reach me at: fffffffffffff
-  #### To view my github profile, and other projects, please visit; fffffffffffff
+  #### For any questions contacts, you can reach me at: tessa.elise.robinson@gmail.com
+  #### To view my github profile, and other projects, please visit; tessie_the_messy
     
     
